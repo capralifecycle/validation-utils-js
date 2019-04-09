@@ -1,8 +1,8 @@
 import each from 'jest-each';
 
 import {
-  isValidNorwegianPhoneNumber,
-  isValidNorwegianCellPhoneNumber
+  isValidNorwegianCellPhoneNumber,
+  isValidNorwegianPhoneNumber
 } from './phone-number-validator';
 
 describe('phone-number-validator', () => {
