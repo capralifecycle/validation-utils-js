@@ -1,0 +1,8 @@
+.DS_Store
+/node_modules
+/dist
+/lib
+.vscode
+*.log
+.rpt2_cache*
+.rts2_cache*
