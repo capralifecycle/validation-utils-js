@@ -10,6 +10,8 @@ describe('phone-number-validator', () => {
     each`
       phoneNumber           | expected
       ${'81234567'}         | ${true}
+      ${'81234567 '}        | ${true}
+      ${' 81234567'}        | ${true}
       ${'81 23 45 67'}      | ${true}
       ${'812 34 567'}       | ${true}
       ${'004781234567'}     | ${true}
