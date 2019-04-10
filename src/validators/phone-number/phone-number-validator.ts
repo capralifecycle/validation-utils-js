@@ -1,5 +1,4 @@
-const isNonEmptyString = (value: string): boolean =>
-  !!value && value.constructor === String;
+import { isNonEmptyString } from '../common/common-validator';
 
 export const isValidNorwegianPhoneNumber = (phoneNumber: string): boolean =>
   isNonEmptyString(phoneNumber) &&
