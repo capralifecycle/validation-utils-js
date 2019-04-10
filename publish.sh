@@ -5,7 +5,8 @@ VERSION=$1
 shopt -s extglob
 if [[ $VERSION == @(major|minor|patch) ]]; then
     echo "Pushing tags and publishing package"
-    npm version $VERSION && \
+    npm run build && \
+        npm version $VERSION && \
         git push && \
         git push --tags && \
         npm publish --access public
