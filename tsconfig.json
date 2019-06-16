@@ -1,13 +1,13 @@
 {
   "compilerOptions": {
-    "outDir": "./lib/",
-    "sourceMap": true,
-    "strictNullChecks": true,
-    "module": "es6",
-    "target": "es5",
+    "declaration": true,
+    "esModuleInterop": true,
     "lib": ["es2017", "dom"],
+    "module": "es6",
     "moduleResolution": "node",
-    "esModuleInterop": true
+    "strictNullChecks": true,
+    "target": "es5"
   },
-  "include": ["./src/"]
+  "include": ["./src/"],
+  "exclude": ["./src/**/*.test.ts"]
 }
