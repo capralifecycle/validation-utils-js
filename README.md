@@ -10,6 +10,7 @@ $ npm install
 
 ```
 $ npm test
+$ npm run test:watch // Run in watch-mode
 ```
 
 # Deploy
