@@ -1,4 +1,4 @@
-import { mod11 } from '../common/common-validator';
+import { mod11 } from '../../utils/mod11';
 
 export const isValidAccountNumber = (accountNumber: string): boolean => {
 	const trimmed = ('' + accountNumber).replace(/\./g, '').trim();

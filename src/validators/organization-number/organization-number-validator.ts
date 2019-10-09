@@ -1,4 +1,4 @@
-import { mod11 } from '../common/common-validator';
+import { mod11 } from '../../utils/mod11';
 
 // https://www.brreg.no/om-oss/oppgavene-vare/alle-registrene-vare/om-enhetsregisteret/organisasjonsnummeret/
 export const isValidOrganizationNumber = (OrganizationNumber: string): boolean => {

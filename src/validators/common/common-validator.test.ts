@@ -1,6 +1,6 @@
 import each from 'jest-each';
 
-import { isNonEmptyString, mod11 } from './common-validator';
+import { isNonEmptyString } from './common-validator';
 
 describe('common', () => {
   describe('isNonEmptyString', () => {
@@ -18,19 +18,6 @@ describe('common', () => {
       'should return $expected when validating $value',
       ({ value, expected }) => {
         expect(isNonEmptyString(value)).toBe(expected);
-      }
-    );
-  });
-
-  describe('mod11', () => {
-    each`
-      value           | expected
-      ${'1234567890'} | ${3}
-      ${'234567'}     | ${6}
-    `.it(
-      'should return $expected when validating $value',
-      ({ value, expected }) => {
-        expect(mod11(value)).toBe(expected);
       }
     );
   });

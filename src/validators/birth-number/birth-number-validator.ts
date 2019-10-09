@@ -1,4 +1,4 @@
-import { mod11 } from '../common/common-validator';
+import { mod11 } from '../../utils/mod11';
 
 export const isValidBirthNumber = (birthNumber: string): boolean => {
 	const trimmed = ('' + birthNumber).replace(/ /g, '').trim();
