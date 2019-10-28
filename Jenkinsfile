@@ -7,7 +7,7 @@ buildConfig {
   dockerNode {
     checkout scm
 
-    def img = docker.image('node:11-alpine')
+    def img = docker.image('node:12-alpine')
     img.pull()
     img.inside {
       stage('Security audit') {
