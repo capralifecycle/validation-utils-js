@@ -1,20 +1,8 @@
 # Utils for validating input fields
 
-# Develop locally
+## Contributing
 
-```
-$ npm install
-```
-
-# Run tests
-
-```
-$ npm test
-$ npm run test:watch // Run in watch-mode
-```
-
-# Deploy
-
-TBA
-
-
+This project uses [semantic release](https://semantic-release.gitbook.io/semantic-release/)
+to automate releases and follows
+[Git commit guidelines](https://github.com/angular/angular/blob/master/CONTRIBUTING.md#commit)
+from the Angular project.

@@ -3,22 +3,19 @@
 // See https://github.com/capralifecycle/jenkins-pipeline-library
 @Library('cals') _
 
-buildConfig {
+buildConfig([
+  slack: [
+    channel: '#cals-dev-info',
+    teamDomain: 'cals-capra'
+  ],
+]) {
   dockerNode {
     checkout scm
 
-    def img = docker.image('node:12-alpine')
+    def img = docker.image('923402097046.dkr.ecr.eu-central-1.amazonaws.com/buildtools/tool/node:12-alpine')
     img.pull()
-    img.inside {
-      stage('Security audit') {
-        // We don't fail the job if there are issues. This is so that we
-        // don't block unrelated dependency updates. The correct way to
-        // handle this would be to block only when a change introduces
-        // a vulnerability, but we're not there yet. Should probably
-        // use another GitHub status check for that, e.g. by Snyk.
-        sh 'npm audit || true'
-      }
 
+    img.inside {
       stage('Install dependencies') {
         sh 'npm ci'
       }
@@ -31,8 +28,26 @@ buildConfig {
         sh 'npm test'
       }
 
-      stage('Build') {
-        sh 'npm run build'
+      // We only run semantic-release on the master branch,
+      // as we do not want credentials to be exposed to the job
+      // on other branches or in PRs.
+      //
+      // To have the correct version applied to the build we need
+      // to use a hook that is run during semantic-release execution.
+      // For this we use the 'prepack' hook. This also ensures
+      // that 'npm link' and alike builds the code, and we can
+      // trigger the same hook on other branches.
+
+      if (env.BRANCH_NAME == 'master') {
+        stage('Build, verify and possibly release') {
+          withSemanticReleaseEnv {
+            sh 'npm run semantic-release'
+          }
+        }
+      } else {
+        stage('Build and verify') {
+          sh 'npm pack'
+        }
       }
     }
   }

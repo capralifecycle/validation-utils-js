@@ -2,6 +2,7 @@
 /node_modules
 /dist
 /lib
+/coverage
 .vscode
 *.log
 .rpt2_cache*
