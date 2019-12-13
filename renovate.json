@@ -8,7 +8,9 @@
   "major": {
     "automerge": false
   },
+  "masterIssue": true,
   "pin": {
     "automerge": true
-  }
+  },
+  "semanticCommits": true
 }
