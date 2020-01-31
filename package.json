@@ -24,7 +24,7 @@
   "homepage": "https://github.com/capraconsulting/validation-utils-js",
   "license": "Apache-2.0",
   "devDependencies": {
-    "@types/jest": "25.1.0",
+    "@types/jest": "25.1.1",
     "@types/jest-each": "0.3.4",
     "jest": "25.1.0",
     "jest-each": "25.1.0",
