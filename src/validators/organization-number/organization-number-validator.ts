@@ -1,7 +1,7 @@
 import { mod11 } from '../../utils/mod11';
 
 // https://www.brreg.no/om-oss/oppgavene-vare/alle-registrene-vare/om-enhetsregisteret/organisasjonsnummeret/
-export const isValidOrganizationNumber = (
+export const isValidNorwegianOrganizationNumber = (
   OrganizationNumber: string
 ): boolean => {
   const trimmed = ('' + OrganizationNumber).replace(/\./g, '').trim();

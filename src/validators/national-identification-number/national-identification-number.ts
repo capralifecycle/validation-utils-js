@@ -1,6 +1,8 @@
 import { mod11 } from '../../utils/mod11';
 
-export const isValidBirthNumber = (birthNumber: string): boolean => {
+export const isValidNorwegianIdentificationNumber = (
+  birthNumber: string
+): boolean => {
   const trimmed = ('' + birthNumber).replace(/ /g, '').trim();
 
   if (!/^\d{11}$/.test(trimmed)) {

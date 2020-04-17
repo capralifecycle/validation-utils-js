@@ -1,9 +1,9 @@
 import each from 'jest-each';
 
-import { isValidBirthNumber } from './birth-number-validator';
+import { isValidNorwegianIdentificationNumber } from './national-identification-number';
 
-describe('birth-number-validator', () => {
-  describe('isValidBirthNumber', () => {
+describe('national-identification-number', () => {
+  describe('isValidNorwegianIdentificationNumber', () => {
     each`
       birthNumber         | expected
       ${1}                | ${false}
@@ -17,7 +17,9 @@ describe('birth-number-validator', () => {
     `.it(
       'should return $expected when validating $birthNumber',
       ({ birthNumber, expected }) => {
-        expect(isValidBirthNumber(birthNumber)).toBe(expected);
+        expect(isValidNorwegianIdentificationNumber(birthNumber)).toBe(
+          expected
+        );
       }
     );
   });

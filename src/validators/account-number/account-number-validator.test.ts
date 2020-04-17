@@ -1,9 +1,9 @@
 import each from 'jest-each';
 
-import { isValidAccountNumber } from './account-number-validator';
+import { isValidNorwegianAccountNumber } from './account-number-validator';
 
 describe('account-number-validator', () => {
-  describe('isValidAccountNumber', () => {
+  describe('isValidNorwegianAccountNumber', () => {
     each`
       accountNumber         | expected
       ${1}                  | ${false}
@@ -16,7 +16,7 @@ describe('account-number-validator', () => {
     `.it(
       'should return $expected when validating $accountNumber',
       ({ accountNumber, expected }) => {
-        expect(isValidAccountNumber(accountNumber)).toBe(expected);
+        expect(isValidNorwegianAccountNumber(accountNumber)).toBe(expected);
       }
     );
   });

@@ -1,6 +1,8 @@
 import { mod11 } from '../../utils/mod11';
 
-export const isValidAccountNumber = (accountNumber: string): boolean => {
+export const isValidNorwegianAccountNumber = (
+  accountNumber: string
+): boolean => {
   const trimmed = ('' + accountNumber).replace(/\./g, '').trim();
   return (
     /^\d{11}$/.test(trimmed) &&

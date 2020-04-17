@@ -1,9 +1,9 @@
 import each from 'jest-each';
 
-import { isValidOrganizationNumber } from './organization-number-validator';
+import { isValidNorwegianOrganizationNumber } from './organization-number-validator';
 
 describe('organization-number-validator', () => {
-  describe('isValidOrganizationNumber', () => {
+  describe('isValidNorwegianOrganizationNumber', () => {
     each`
       organizationNumber   | expected
       ${1}                 | ${false}
@@ -15,7 +15,9 @@ describe('organization-number-validator', () => {
     `.it(
       'should return $expected when validating $organizationNumber',
       ({ organizationNumber, expected }) => {
-        expect(isValidOrganizationNumber(organizationNumber)).toBe(expected);
+        expect(isValidNorwegianOrganizationNumber(organizationNumber)).toBe(
+          expected
+        );
       }
     );
   });
