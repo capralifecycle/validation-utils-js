@@ -1,8 +1,8 @@
 import each from 'jest-each';
 
-import { isValidNorwegianIdentificationNumber } from './national-identification-number';
+import { isValidNorwegianIdentificationNumber } from './national-identification-number-validator';
 
-describe('national-identification-number', () => {
+describe('national-identification-number-validator', () => {
   describe('isValidNorwegianIdentificationNumber', () => {
     each`
       birthNumber         | expected
