@@ -1,6 +1,6 @@
 {
   "name": "@capraconsulting/validation-utils-js",
-  "version": "0.0.8",
+  "version": "0.0.0-development",
   "description": "Utils for valdiation of input fields",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
