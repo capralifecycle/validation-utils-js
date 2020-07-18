@@ -24,8 +24,8 @@
   "homepage": "https://github.com/capraconsulting/validation-utils-js",
   "license": "Apache-2.0",
   "devDependencies": {
-    "@commitlint/cli": "9.0.1",
-    "@commitlint/config-conventional": "9.0.1",
+    "@commitlint/cli": "9.1.1",
+    "@commitlint/config-conventional": "9.1.1",
     "@types/jest": "26.0.4",
     "@types/jest-each": "0.3.4",
     "husky": "4.2.5",
