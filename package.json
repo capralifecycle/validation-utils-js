@@ -28,7 +28,7 @@
     "@commitlint/config-conventional": "9.1.2",
     "@types/jest": "26.0.13",
     "@types/jest-each": "0.3.4",
-    "husky": "4.2.5",
+    "husky": "4.3.0",
     "jest": "26.4.2",
     "jest-each": "26.4.2",
     "prettier": "2.1.1",
