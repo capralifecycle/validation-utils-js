@@ -15,7 +15,8 @@
     "lint": "tslint -c tslint.json 'src/**/*.ts'",
     "prettier": "prettier --config ./.prettierrc --write 'src/**/*.ts'",
     "prepack": "npm run build",
-    "semantic-release": "semantic-release"
+    "semantic-release": "semantic-release",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
@@ -40,10 +41,5 @@
     "tslint": "5.20.1",
     "tslint-config-prettier": "1.18.0",
     "typescript": "4.2.3"
-  },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
   }
 }
