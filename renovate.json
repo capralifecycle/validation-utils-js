@@ -4,9 +4,8 @@
   "automergeType": "branch",
   "packageRules": [
     {
-      "matchSourceUrlPrefixes": ["https://github.com/facebook/jest"],
       "packageNames": ["ts-jest", "@types/jest"],
-      "groupName": "jest packages"
+      "groupName": "jest monorepo"
     }
   ]
 }
