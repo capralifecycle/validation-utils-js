@@ -1,11 +1,5 @@
 {
   "extends": ["github>capraconsulting/renovate-config:library"],
   "automerge": true,
-  "automergeType": "branch",
-  "packageRules": [
-    {
-      "packageNames": ["ts-jest", "@types/jest"],
-      "groupName": "jest monorepo"
-    }
-  ]
+  "automergeType": "branch"
 }
