@@ -12,10 +12,7 @@ buildConfig([
   dockerNode {
     checkout scm
 
-    def img = docker.image('923402097046.dkr.ecr.eu-central-1.amazonaws.com/buildtools/tool/node:12-alpine')
-    img.pull()
-
-    img.inside {
+    insideToolImage('node:12-alpine') {
       stage('Install dependencies') {
         sh 'npm ci'
       }
