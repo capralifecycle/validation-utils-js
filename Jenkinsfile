@@ -5,7 +5,7 @@
 
 buildConfig([
   slack: [
-    channel: '#cals-dev-info',
+    channel: '#fnf-feed',
     teamDomain: 'cals-capra'
   ],
 ]) {
