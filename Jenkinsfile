@@ -12,7 +12,7 @@ buildConfig([
   dockerNode {
     checkout scm
 
-    insideToolImage('node:18') {
+    insideToolImage('node:14') {
       stage('Install dependencies') {
         sh 'npm ci'
       }
