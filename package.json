@@ -37,7 +37,7 @@
     "rimraf": "5.0.5",
     "rollup": "4.6.1",
     "rollup-plugin-typescript2": "0.36.0",
-    "semantic-release": "22.0.8",
+    "semantic-release": "22.0.9",
     "ts-jest": "29.1.1",
     "tslint": "5.20.1",
     "tslint-config-prettier": "1.18.0",
