@@ -1,5 +1,8 @@
 # Utils for validating input fields
 
+> [!NOTE]
+> This project has been archived, as the responsible team has been dissolved.
+
 ## Contributing
 
 This project uses [semantic release](https://semantic-release.gitbook.io/semantic-release/)
